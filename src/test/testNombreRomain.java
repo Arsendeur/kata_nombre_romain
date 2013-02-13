@@ -13,18 +13,19 @@ import static junit.framework.Assert.assertEquals;
 public class testNombreRomain {
 
     @Test
-    public void peutAfficher1()
+    public void peutAfficherNombresBasiques()
     {
         NombreRomain unNombreRomain = new NombreRomain();
 
         assertEquals(unNombreRomain.RomainToNombre("I"), 1);
-    }
-
-    @Test
-    public void peutAfficher5()
-    {
-        NombreRomain unNombreRomain = new NombreRomain();
-
         assertEquals(unNombreRomain.RomainToNombre("V"), 5);
+        assertEquals(unNombreRomain.RomainToNombre("X"), 10);
+        assertEquals(unNombreRomain.RomainToNombre("L"), 50);
+        assertEquals(unNombreRomain.RomainToNombre("C"), 100);
+        assertEquals(unNombreRomain.RomainToNombre("D"), 500);
+        assertEquals(unNombreRomain.RomainToNombre("M"), 1000);
+
     }
+
+
 }

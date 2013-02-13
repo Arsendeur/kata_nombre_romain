@@ -17,6 +17,11 @@ public class NombreRomain {
     {
         listeDesNombresRomain.put("I", 1);
         listeDesNombresRomain.put("V", 5);
+        listeDesNombresRomain.put("X", 10);
+        listeDesNombresRomain.put("L", 50);
+        listeDesNombresRomain.put("C", 100);
+        listeDesNombresRomain.put("D", 500);
+        listeDesNombresRomain.put("M", 1000);
     }
 
     public int  RomainToNombre(String nombreRomainAConvertir)
