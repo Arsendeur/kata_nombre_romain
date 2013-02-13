@@ -48,6 +48,12 @@ public class testNombreRomain {
         assertEquals(unNombreRomain.RomainToNombre("MMMMCMXCIX"), 4999);
     }
 
+    @Test
+    public void peutAfficherNombresRomainBasique()
+    {
+        NombreRomain unNombreRomain = new NombreRomain();
 
+        assertEquals(unNombreRomain.NombreToRomain(1), "I");
+    }
 
 }

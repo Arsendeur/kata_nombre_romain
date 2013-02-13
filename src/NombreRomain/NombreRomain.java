@@ -64,4 +64,8 @@ public class NombreRomain {
     private boolean LeNombrePrecedenEstPlusPetitQueLeNombreRomain(char nombreRomain) {
         return nombrePrecedent < listeDesNombresRomain.get(Character.toString(nombreRomain));
     }
+
+    public String NombreToRomain(int nombreArabe) {
+        return "I";
+    }
 }
