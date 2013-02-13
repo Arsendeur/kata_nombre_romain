@@ -27,5 +27,12 @@ public class testNombreRomain {
 
     }
 
+    @Test
+    public void peutAfficherLeChiffre2()
+    {
+        NombreRomain unNombreRomain = new NombreRomain();
+
+        assertEquals(unNombreRomain.RomainToNombre("II"), 2);
+    }
 
 }

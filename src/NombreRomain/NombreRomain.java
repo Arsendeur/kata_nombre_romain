@@ -12,6 +12,7 @@ import java.util.Map;
  */
 public class NombreRomain {
     private Map<String, Integer> listeDesNombresRomain = new HashMap<String, Integer>();
+    private int nombreTotal;
 
     public NombreRomain()
     {
@@ -26,6 +27,11 @@ public class NombreRomain {
 
     public int  RomainToNombre(String nombreRomainAConvertir)
     {
-        return listeDesNombresRomain.get(nombreRomainAConvertir);
+        nombreTotal = 0;
+        for(final char nombreRomain : nombreRomainAConvertir.toCharArray())
+        {
+            nombreTotal += listeDesNombresRomain.get(Character.toString(nombreRomain));
+        }
+        return nombreTotal;
     }
 }
