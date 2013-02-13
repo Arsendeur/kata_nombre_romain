@@ -13,6 +13,7 @@ import java.util.Map;
 public class NombreRomain {
     private Map<String, Integer> listeDesNombresRomain = new HashMap<String, Integer>();
     private int nombreTotal;
+    private int nombrePrecedent;
 
     public NombreRomain()
     {
@@ -28,9 +29,19 @@ public class NombreRomain {
     public int  RomainToNombre(String nombreRomainAConvertir)
     {
         nombreTotal = 0;
+        nombrePrecedent = 0;
+        int nombrePrecedent = 0;
         for(final char nombreRomain : nombreRomainAConvertir.toCharArray())
         {
-            nombreTotal += listeDesNombresRomain.get(Character.toString(nombreRomain));
+            if(nombrePrecedent < listeDesNombresRomain.get(Character.toString(nombreRomain)))
+            {
+                nombreTotal += listeDesNombresRomain.get(Character.toString(nombreRomain)) - (nombrePrecedent*2);
+            }
+            else
+            {
+                nombreTotal += listeDesNombresRomain.get(Character.toString(nombreRomain));
+            }
+            nombrePrecedent = listeDesNombresRomain.get(Character.toString(nombreRomain));
         }
         return nombreTotal;
     }

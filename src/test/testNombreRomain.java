@@ -37,4 +37,12 @@ public class testNombreRomain {
         assertEquals(unNombreRomain.RomainToNombre("MDCLXVII"), 1667);
     }
 
+    @Test
+    public void peutAfficherLeChiffre4()
+    {
+        NombreRomain unNombreRomain = new NombreRomain();
+
+        assertEquals(unNombreRomain.RomainToNombre("IV"), 4);
+    }
+
 }
