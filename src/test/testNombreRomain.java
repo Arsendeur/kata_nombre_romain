@@ -43,6 +43,9 @@ public class testNombreRomain {
         NombreRomain unNombreRomain = new NombreRomain();
 
         assertEquals(unNombreRomain.RomainToNombre("IV"), 4);
+        assertEquals(unNombreRomain.RomainToNombre("IX"), 9);
+        assertEquals(unNombreRomain.RomainToNombre("CMXLIV"), 944);
+        assertEquals(unNombreRomain.RomainToNombre("MMMMCMXCIX"), 4999);
     }
 
 }
