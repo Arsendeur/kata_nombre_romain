@@ -1,5 +1,8 @@
 package NombreRomain;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created with IntelliJ IDEA.
  * User: arsendeur
@@ -8,9 +11,16 @@ package NombreRomain;
  * To change this template use File | Settings | File Templates.
  */
 public class NombreRomain {
+    private Map<String, Integer> listeDesNombresRomain = new HashMap<String, Integer>();
+
+    public NombreRomain()
+    {
+        listeDesNombresRomain.put("I", 1);
+        listeDesNombresRomain.put("V", 5);
+    }
 
     public int  RomainToNombre(String nombreRomainAConvertir)
     {
-        return 1;
+        return listeDesNombresRomain.get(nombreRomainAConvertir);
     }
 }
