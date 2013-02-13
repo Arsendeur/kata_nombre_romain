@@ -28,11 +28,13 @@ public class testNombreRomain {
     }
 
     @Test
-    public void peutAfficherLeChiffre2()
+    public void peutAfficherDesNombresPlusCompliques()
     {
         NombreRomain unNombreRomain = new NombreRomain();
 
         assertEquals(unNombreRomain.RomainToNombre("II"), 2);
+        assertEquals(unNombreRomain.RomainToNombre("VIII"), 8);
+        assertEquals(unNombreRomain.RomainToNombre("MDCLXVII"), 1667);
     }
 
 }
