@@ -38,7 +38,7 @@ public class testNombreRomain {
     }
 
     @Test
-    public void peutAfficherLeChiffre4()
+    public void peutAfficheDesNombresEnSoustraction()
     {
         NombreRomain unNombreRomain = new NombreRomain();
 
@@ -47,5 +47,7 @@ public class testNombreRomain {
         assertEquals(unNombreRomain.RomainToNombre("CMXLIV"), 944);
         assertEquals(unNombreRomain.RomainToNombre("MMMMCMXCIX"), 4999);
     }
+
+
 
 }
