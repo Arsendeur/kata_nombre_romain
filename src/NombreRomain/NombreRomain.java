@@ -30,19 +30,38 @@ public class NombreRomain {
     {
         nombreTotal = 0;
         nombrePrecedent = 0;
-        int nombrePrecedent = 0;
         for(final char nombreRomain : nombreRomainAConvertir.toCharArray())
         {
-            if(nombrePrecedent < listeDesNombresRomain.get(Character.toString(nombreRomain)))
-            {
-                nombreTotal += listeDesNombresRomain.get(Character.toString(nombreRomain)) - (nombrePrecedent*2);
-            }
-            else
-            {
-                nombreTotal += listeDesNombresRomain.get(Character.toString(nombreRomain));
-            }
-            nombrePrecedent = listeDesNombresRomain.get(Character.toString(nombreRomain));
+            additionneLeNombreTotalAvecLeNombreRomainDonne(nombreRomain);
         }
         return nombreTotal;
+    }
+
+    private void additionneLeNombreTotalAvecLeNombreRomainDonne(char nombreRomain) {
+        if(LeNombrePrecedenEstPlusPetitQueLeNombreRomain(nombreRomain))
+        {
+            EnleverLeNombreRomainAuNombreTotal(nombreRomain);
+        }
+        else
+        {
+            AjouterLeNombreRomainAuNombreTotal(nombreRomain);
+        }
+        miseAJourDuNombrePrecedent(nombreRomain);
+    }
+
+    private void miseAJourDuNombrePrecedent(char nombreRomain) {
+        nombrePrecedent = listeDesNombresRomain.get(Character.toString(nombreRomain));
+    }
+
+    private void AjouterLeNombreRomainAuNombreTotal(char nombreRomain) {
+        nombreTotal += listeDesNombresRomain.get(Character.toString(nombreRomain));
+    }
+
+    private void EnleverLeNombreRomainAuNombreTotal(char nombreRomain) {
+        nombreTotal += listeDesNombresRomain.get(Character.toString(nombreRomain)) - (nombrePrecedent*2);
+    }
+
+    private boolean LeNombrePrecedenEstPlusPetitQueLeNombreRomain(char nombreRomain) {
+        return nombrePrecedent < listeDesNombresRomain.get(Character.toString(nombreRomain));
     }
 }
