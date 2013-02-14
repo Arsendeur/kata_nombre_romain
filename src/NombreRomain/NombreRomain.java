@@ -65,7 +65,4 @@ public class NombreRomain {
         return nombrePrecedent < listeDesNombresRomain.get(Character.toString(nombreRomain));
     }
 
-    public String NombreToRomain(int nombreArabe) {
-        return "I";
-    }
 }
